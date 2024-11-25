@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/style.css"> 
+</head>
+
+<body>
+  <main>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <div class="info-content">
+          <h1 class="name">Sanket Kotkar</h1>
+          <p class="title">Full Stack Developer</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a class="contact-link">SanketKotkar@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a>+91 1122334455</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="1982-06-23">2 March, 2003</time>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Pune, India</address>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+    <div class="main-content">
+   <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Home</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Education</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Project</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+          <li class="navbar-item">
+            <a href="#" onclick="showAdminLogin()">Admin Login</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+      <article class="home  active" data-page="home">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+          <p>
+            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. I created web design for many famous brand companies.
+          </p>
+        </section>
+
+        <!--
+          - service
+        -->
+        <section class="service">
+          <h3 class="h3 service-title">What i'm doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </section>
+
+        </div>
+      </article>
+      <!--
+        - #Education
+      -->
+      <article class="education" data-page="education">
+        <header>
+          <h2 class="h2 article-title">Education</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">North Maharashtra University,Jalgaon</h4>
+              <span>2020 — 2025</span>
+              <p class="timeline-text">My favorite coding tools are visual studio code and and I can create websites</p>
+            </li>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of Texas</h4>
+
+              <span>2020 — 2024</span>
+              <p class="timeline-text">
+                i can setup your project to use basic SEO principles which will push your project to the first page on search engines and save you ads money
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2017 — 2018</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2024 — Present</span>
+
+              <p class="timeline-text">
+                i can setup your project to use basic SEO principles which will push your project to the first page on search engines and save you ads money
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2022 — 2024</span>
+
+              <p class="timeline-text">
+                I can code my own designs or even use the customer's design as base. My focus is to generate clean code that's well structured for reliability
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <span>2020 — 2022</span>
+              <p class="timeline-text">
+                Successful online projects start with good design. It establishes a solid foundation for future development and allows for long term growth
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        
+
+      </article>
+
+      <!--
+        - #Projects
+      -->
+
+      <article class="project" data-page="project">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+        <section class="projects">
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+          </div>
+          <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+                <h3 class="project-title">Finance</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            
+
+            
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        
+
+     
+
+          <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+              <input type="text" id="name" placeholder="Your name" required>
+              <input type="email" id="email" placeholder="Your email(GMAIL)" required>
+              <textarea id="message" placeholder="Your message" required></textarea>
+              <div class="contactbtn">
+              <button id="submit">Send</button>
+              </div>
+            </form>
+                 
+        
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+ <!--Contact section Ends here-->
+      
+ <section id="admin-login" class="section">
+  <h2> Admin Login </h2>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit" >Login</button>
+  </form>
+</section>
+
+<!--Admin Login Section ends here-->
+<section id="admin-section" class="section">
+  <h2> User Responses </h2>
+  <div id="user-responses"></div> <!-- DIV is a container tag-->
+</section>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  
+
+</body>
+</html>
